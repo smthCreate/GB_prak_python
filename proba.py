@@ -1,1 +1,1 @@
-print(1.09%1)
+print([int(i) for i in list(input().split())])

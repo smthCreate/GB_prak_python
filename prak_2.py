@@ -1,4 +1,4 @@
-
+from random import randint
 #1
 def summ(x):
     x = list(str(x))
@@ -27,7 +27,15 @@ def compos_of_list(str,ls):
     for i in indexs:
         compos*=ls[i]
     return compos
-n = int(input())
-ls = [i for i in range(-n,n+1)]
+#n = int(input())
+#ls = [i for i in range(-n,n+1)]
 
 #5
+def mixter(ls):
+    for i in range(len(ls)):
+        index = randint(0, len(ls)-1)
+        var = ls[index]
+        ls[index]=ls[-index]
+        ls[-index] = var
+    return ls
+# print(mixter([int(i) for i in list(input().split())]))
