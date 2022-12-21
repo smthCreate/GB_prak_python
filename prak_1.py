@@ -15,18 +15,17 @@ def holidays(x):
 def logicwork():
     all_predicts = []
     for i in itertools.combinations_with_replacement("010",3):
+        print(i)
         i = list(i)
         for j in range(len(i)):
             i[j] = int(i[j])
         all_predicts.append(i)
-    answer = str()
+    answer = []
     for i in all_predicts:
-        if ((-1)*(i[0]*i[1]*[2]))==((-1)*i[0]+(-1)*i[1]+(-1)*i[1]):
-            if answer != "no":
-                answer = "yes"
-        else:
-            answer = "no"
+        if ((i[0] and i[1] and not i[2]) or (i[0] and not i[1] and i[2]))==1:
+            answer.append(i)
     return answer
+print(logicwork())
 
 #3
 def quarter_out (x,y):
